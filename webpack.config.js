@@ -4,8 +4,8 @@ const isProd = MODE === 'development';
 
 // ファイル出力時の絶対パス指定に使用
 const path = require('path');
-
-// プラグイン
+// html
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 // js最適化
 const TerserPlugin = require('terser-webpack-plugin');
 // css最適化
@@ -17,13 +17,20 @@ const webpack = require('webpack');
 
 module.exports = {
   // エントリーポイント(メインのjsファイル)
-  entry: './src/app.js',
+  //entry: './src/app.js',
+  entry: {
+    'app':'./src/js/main.js',
+    'main.css':'./src/scss/main.scss'
+  },
+  resolve: {
+    extensions: ['.js'],
+  },
   // ファイルの出力設定
   output: {
     // 出力先(絶対パスでの指定必須)
-    path: path.resolve(__dirname, 'dist/js'),
+    path: path.resolve(__dirname, './dist'),
     // 出力ファイル名
-    filename: 'bundle.js',
+    filename: './js/[name].js',
   },
   mode: MODE,
   // ソースマップ有効
@@ -51,7 +58,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss/,
+        test: /\.(sa|sc|c)ss$/,
         // Sassファイルの読み込みとコンパイル
         use: [
           'style-loader',
@@ -118,13 +125,20 @@ module.exports = {
         ],
   },
   devServer: {
-    publicPath: '/dist/js/',
-    watchContentBase: true,
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     open: true,
-    openPage: 'index.html',
-    host: '0.0.0.0',
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src/html/index.html'),
+      filename: './index.html',
+      chunks: [
+        'app',
+        'main.css',
+      ]
+    }),
     new CssMinimizerPlugin({
       test: /\.optimize\.css$/g,
       minify: CssMinimizerPlugin.cleanCssMinify,
@@ -139,7 +153,7 @@ module.exports = {
       },
     }),
     new MiniCssExtractPlugin({
-      filename: '../css/[name].css',
+      filename: './css/[name]',
       chunkFilename: '[id].css',
     }),
     new webpack.ProvidePlugin({

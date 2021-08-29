@@ -1,0 +1,53 @@
+/* harmony import */
+
+/* istanbul ignore if  */
+
+/* istanbul ignore next  */
+
+/* unused harmony default export */
+
+/* webpack/runtime/compat get default export */
+
+/*#__PURE__*/
+
+/************************************************************************/
+
+/******/
+
+/***/
+
+// Check if module is in cache
+
+// Create a new module (and put it into the cache)
+
+// Execute the module function
+
+// For old IE
+
+// Return the exports of the module
+
+// Special case to return head of iframe instead of iframe itself
+
+// The module cache
+
+// The require function
+
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+
+// This will throw an exception if access to iframe is blocked
+
+// define getter functions for harmony exports
+
+// due to cross-origin restrictions
+
+// getDefaultExport function for compatibility with non-harmony modules
+
+// istanbul ignore if
+
+// istanbul ignore next
+
+// no module.id needed
+
+// no module.loaded needed
+
+// webpackBootstrap

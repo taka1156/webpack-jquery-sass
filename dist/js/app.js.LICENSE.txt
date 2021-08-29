@@ -96,12 +96,6 @@
 
 /* global Symbol */
 
-/* harmony default export */
-
-/* istanbul ignore if  */
-
-/* istanbul ignore next  */
-
 /* jshint -W018 */
 
 /* matches from matchExpr["CHILD"]
@@ -114,10 +108,6 @@
 				7 sign of y-component
 				8 y of y-component
 			*/
-
-/* provided dependency */
-
-/* webpack/runtime/compat get default export */
 
 /*!
  * Sizzle CSS Selector Engine v2.3.6
@@ -143,8 +133,6 @@
  *
  * Date: 2021-03-02T17:08Z
  */
-
-/*#__PURE__*/
 
 /**
  * A low-level selection function that works with Sizzle's compiled
@@ -636,8 +624,6 @@
 
 // By happy coincidence, a (broken) gEBTN appears on DocumentFragment nodes too
 
-// CONCATENATED MODULE: ./src/app.js
-
 // CSS escapes
 
 // CSS string/identifier serialization
@@ -970,10 +956,6 @@
 
 // Don't set styles on text and comment nodes
 
-// EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js
-
-// EXTERNAL MODULE: ./src/js/main.js
-
 // Early iOS 10 versions support `attachShadow` but not `getRootNode`,
 
 // Easily-parseable/retrievable ID or TAG or CLASS selectors
@@ -1153,8 +1135,6 @@
 // For mouseenter/leave call the handler if related is outside the target.
 
 // For mutual compressibility with _default, replace `this` access with a local var.
-
-// For old IE
 
 // For options that shouldn't be deep extended:
 
@@ -2142,8 +2122,6 @@
 
 // Sort stability
 
-// Special case to return head of iframe instead of iframe itself
-
 // Special processors (notify) just wait for resolution
 
 // Speed up dequeue by getting out quickly if this is just a lookup
@@ -2452,7 +2430,7 @@
 
 // This corresponds to the behavior of CSS absolute positioning
 
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 
 // This expression is here for better compressibility (see addClass)
 
@@ -2473,8 +2451,6 @@
 // This technically gets the ordering wrong w.r.t. to `.trigger()` (in which the
 
 // This transport only deals with cross domain or forced-by-attrs requests
-
-// This will throw an exception if access to iframe is blocked
 
 // Timeout
 
@@ -2822,8 +2798,6 @@
 
 // deferred.resolveWith = list.fireWith
 
-// define getter functions for harmony exports
-
 // descendant combinators, which is not what we want.
 
 // did it), otherwise encode params recursively.
@@ -2833,8 +2807,6 @@
 // display for all div elements is set to "inline",
 
 // don't support it.
-
-// due to cross-origin restrictions
 
 // e.g. http://example.com:80x/
 
@@ -2897,8 +2869,6 @@
 // getBoundingClientRect().width unless display is changed.
 
 // getComputedStyle returns percent when specified for top/left/bottom/right;
-
-// getDefaultExport function for compatibility with non-harmony modules
 
 // getElementById can match elements by name instead of ID
 
@@ -3009,10 +2979,6 @@
 // is present, execute the factory and get jQuery.
 
 // isHiddenWithinTree might be called from jQuery#filter function;
-
-// istanbul ignore if
-
-// istanbul ignore next
 
 // it can be rejected by the transport if it is invalid
 
